@@ -193,11 +193,12 @@
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
     <!-- Script for the silly banner -->
+​
     <script>
         function showBanner() {
             alert("You added a real nice lookin' map to your cart! 🎉");
         }
-
+    
         function createMoney() {
             const total = 200; // Total number of money symbols
             for (let i = 0; i < total; i++) {
@@ -207,54 +208,40 @@
                 money.style.left = Math.random() * window.innerWidth + 'px';
                 money.style.animationDelay = Math.random() * 1 + 's';
                 document.body.appendChild(money);
-
+    
                 // Remove the money element after animation ends
                 money.addEventListener('animationend', function() {
                     money.remove();
                 });
             }
         }
-
-        // Get references to the button and the hidden text box for Page 1
-        const showTextBoxButton1 = document.getElementById('showTextBoxButton1');
-        const hiddenTextbox1 = document.getElementById('hiddenTextbox1');
-
-        // Add event listener to the button for Page 1
-        showTextBoxButton1.addEventListener('click', function() {
-            // Toggle the visibility of the text box for Page 1
-            if (hiddenTextbox1.style.display === 'none') {
-                hiddenTextbox1.style.display = 'block';
-            } else {
-                hiddenTextbox1.style.display = 'none';
-            }
+    
+        // Function to handle page navigation
+        function changePage(pageId) {
+            const pages = document.querySelectorAll('.container');
+            pages.forEach(page => {
+                if(page.id === pageId) {
+                    page.style.display = 'block';
+                } else {
+                    page.style.display = 'none';
+                }
+            });
+        }
+    
+        // Adding click event listeners to navigation links
+        document.querySelector('.ribbon-nav').addEventListener('click', function(event) {
+            const pageId = event.target.getAttribute('href').substring(1); // Remove the '#' from href
+            changePage(pageId);
+            event.preventDefault(); // Prevent default anchor click behavior
         });
-
-        // Get references to the button and the hidden text box for Page 2
-        const showTextBoxButton2 = document.getElementById('showTextBoxButton2');
-        const hiddenTextbox2 = document.getElementById('hiddenTextbox2');
-
-        // Add event listener to the button for Page 2
-        showTextBoxButton2.addEventListener('click', function() {
-            // Toggle the visibility of the text box for Page 2
-            if (hiddenTextbox2.style.display === 'none') {
-                hiddenTextbox2.style.display = 'block';
-            } else {
-                hiddenTextbox2.style.display = 'none';
-            }
-        });
-
-        // Get references to the button and the hidden text box for Page 3
-        const showTextBoxButton3 = document.getElementById('showTextBoxButton3');
-        const hiddenTextbox3 = document.getElementById('hiddenTextbox3');
-
-        // Add event listener to the button for Page 3
-        showTextBoxButton3.addEventListener('click', function() {
-            // Toggle the visibility of the text box for Page 3
-            if (hiddenTextbox3.style.display === 'none') {
-                hiddenTextbox3.style.display = 'block';
-            } else {
-                hiddenTextbox3.style.display = 'none';
-            }
+    
+        // Toggle visibility of hidden textboxes
+        document.querySelectorAll('[id^="showTextBoxButton"]').forEach(button => {
+            button.addEventListener('click', function() {
+                const textboxId = 'hiddenTextbox' + button.id[button.id.length - 1];
+                const textbox = document.getElementById(textboxId);
+                textbox.style.display = (textbox.style.display === 'none' ? 'block' : 'none');
+            });
         });
     </script>
 </body>
