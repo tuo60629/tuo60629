@@ -16,6 +16,11 @@
         /* Style for the hidden text box */
         #hiddenTextbox {
             display: none;
+            margin-top: 10px; /* Adjusted margin for less space */
+        }
+
+        .col-md-6 img {
+            margin-bottom: 0px; /* Reducing bottom margin of image to 0 */
         }
     </style>
 </head>
@@ -31,7 +36,7 @@
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6">
-                    <img class="card-img-top mb-5 mb-md-0" src="assets/map1.png" alt="Map 1" />
+                    <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" /> <!-- Removed the mb-5 class -->
                 </div>
                 <div class="col-md-6">
                     <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
@@ -56,7 +61,7 @@
     </section>
     <!-- Hidden Text Box -->
     <div id="hiddenTextbox">
-        <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of  how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
+        <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
