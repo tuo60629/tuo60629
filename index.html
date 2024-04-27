@@ -34,47 +34,132 @@
             0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
             100% { transform: translate(300px, -800px) rotate(720deg); opacity: 0; }
         }
+
+        /* Styles for the ribbon navigation */
+        .ribbon-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .ribbon-nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .ribbon-nav a:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!">BUY MY MAPS</a>
-        </div>
-    </nav>
-    <!-- Product section-->
-    <section class="py-5">
-        <div class="container px-4 px-lg-5 my-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-md-6">
-                    <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
-                </div>
-                <div class="col-md-6">
-                    <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
-                    <div class="fs-5 mb-5">
-                        <span class="text-decoration-line-through">$4,000,000.00</span>
-                        <span>$3,999,999.99</span>
+    <!-- Ribbon Navigation -->
+    <div class="ribbon-nav">
+        <a href="#page1">Page 1</a>
+        <a href="#page2">Page 2</a>
+    </div>
+    
+    <!-- Page 1 -->
+    <div id="page1">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+            </div>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6">
+                        <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
                     </div>
-                    <p class="lead"> The Philadelphia School District is interested in encouraging its students to bike to school. The district wants to know what neighborhoods contain its largest (greater than 1200 enrollment) schools that are well-connected (within 0.1 miles) to the bike network. The following five Philadelphia district schools meet these criteria: Baldi, C. C. A. (1209 enrolled); Solis-Cohen, Solomon (1368 enrolled); Frankford High School (1222 enrolled); Frank, Anne (1227 enrolled), Central (2238 enrolled). The following four neighborhoods contain these schools: Bustleton, Castor Gardens, Logan, and Northwood. The total enrollment of these schools is 7264.</p>
-                    <div class="d-flex">
-                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
-                            <i class="bi-cart-fill me-1"></i>
-                            Add to cart
-                        </button>
-                        <!-- "How did I manage to do it?" button -->
-                        <button id="showTextBoxButton" class="btn btn-outline-dark flex-shrink-0" type="button">
-                            How did I manage to do it?
-                        </button>
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
+                        <div class="fs-5 mb-5">
+                            <span class="text-decoration-line-through">$4,000,000.00</span>
+                            <span>$3,999,999.99</span>
+                        </div>
+                        <p class="lead"> The Philadelphia School District is interested in encouraging its students to bike to school. The district wants to know what neighborhoods contain its largest (greater than 1200 enrollment) schools that are well-connected (within 0.1 miles) to the bike network. The following five Philadelphia district schools meet these criteria: Baldi, C. C. A. (1209 enrolled); Solis-Cohen, Solomon (1368 enrolled); Frankford High School (1222 enrolled); Frank, Anne (1227 enrolled), Central (2238 enrolled). The following four neighborhoods contain these schools: Bustleton, Castor Gardens, Logan, and Northwood. The total enrollment of these schools is 7264.</p>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                            <!-- "How did I manage to do it?" button -->
+                            <button id="showTextBoxButton" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                How did I manage to do it?
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox">
+            <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
         </div>
-    </section>
-    <!-- Hidden Text Box -->
-    <div id="hiddenTextbox">
-        <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
+        </footer>
     </div>
+
+    <!-- Page 2 -->
+    <div id="page2" style="display: none;">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+            </div>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6">
+                        <img class="card-img-top mb-0" src="assets/map2.png" alt="Map 2" />
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">Map of New York Subway System</h1>
+                        <div class="fs-5 mb-5">
+                            <span class="text-decoration-line-through">$500,000.00</span>
+                            <span>$499,999.99</span>
+                        </div>
+                        <p class="lead">Detailed and up-to-date map showing all the subway lines, stations, and connections throughout New York City.</p>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                            <!-- "How did I manage to do it?" button -->
+                            <button id="showTextBoxButton2" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                How did I manage to do it?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox2">
+            <textarea class="form-control" rows="3">This map required extensive research into the current subway system, including identifying all stations, lines, and interchanges. Additionally, I utilized advanced design software to create a clear and visually appealing representation of the subway system.</textarea>
+        </div>
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
+        </footer>
+    </div>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
@@ -101,25 +186,20 @@
                 });
             }
         }
-    </script>
-    <script>
-        // Get references to the button and the hidden text box
-        const showTextBoxButton = document.getElementById('showTextBoxButton');
-        const hiddenTextbox = document.getElementById('hiddenTextbox');
 
-        // Add event listener to the button
-        showTextBoxButton.addEventListener('click', function() {
-            // Toggle the visibility of the text box
-            if (hiddenTextbox.style.display === 'none') {
-                hiddenTextbox.style.display = 'block';
+        // Get references to the button and the hidden text box for Page 2
+        const showTextBoxButton2 = document.getElementById('showTextBoxButton2');
+        const hiddenTextbox2 = document.getElementById('hiddenTextbox2');
+
+        // Add event listener to the button for Page 2
+        showTextBoxButton2.addEventListener('click', function() {
+            // Toggle the visibility of the text box for Page 2
+            if (hiddenTextbox2.style.display === 'none') {
+                hiddenTextbox2.style.display = 'block';
             } else {
-                hiddenTextbox.style.display = 'none';
+                hiddenTextbox2.style.display = 'none';
             }
         });
     </script>
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
-    </footer>
 </body>
 </html>
