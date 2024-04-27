@@ -58,5 +58,32 @@
                 alert("You added a real nice lookin' map to your cart! 🎉");
             }
         </script>
+        <!-- Button -->
+        <div class="d-flex">
+            <button id="showTextBoxButton" class="btn btn-outline-dark flex-shrink-0" type="button">
+                How did I manage to do it?
+            </button>
+        </div>
+        
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox">
+            <textarea class="form-control" rows="3">YADAYAD</textarea>
+        </div>
+        
+        <script>
+            // Get references to the button and the hidden text box
+            const showTextBoxButton = document.getElementById('showTextBoxButton');
+            const hiddenTextbox = document.getElementById('hiddenTextbox');
+        
+            // Add event listener to the button
+            showTextBoxButton.addEventListener('click', function() {
+                // Toggle the visibility of the text box
+                if (hiddenTextbox.style.display === 'none') {
+                    hiddenTextbox.style.display = 'block';
+                } else {
+                    hiddenTextbox.style.display = 'none';
+                }
+            });
+        </script>
     </body>
 </html>
