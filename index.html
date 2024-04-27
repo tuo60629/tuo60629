@@ -53,7 +53,15 @@
             margin: 0 10px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            
+        }
+
+        .ribbon-nav a:hover {
+            background-color: #555;
+        }
+
+        /* Style for content pages */
+        .content-page {
+            padding-top: 70px; /* Adjusted padding to avoid covering content */
         }
     </style>
 </head>
@@ -65,8 +73,8 @@
         <a href="#page3">Page 3</a>
     </div>
     
-    <!-- Page 1 -->
-    <div id="page1">
+    <!-- Home Page -->
+    <div class="container px-4 px-lg-5 mt-5">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -75,7 +83,48 @@
         </nav>
         <!-- Product section-->
         <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
+                </div>
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through">$4,000,000.00</span>
+                        <span>$3,999,999.99</span>
+                    </div>
+                    <p class="lead"> The Philadelphia School District is interested in encouraging its students to bike to school. The district wants to know what neighborhoods contain its largest (greater than 1200 enrollment) schools that are well-connected (within 0.1 miles) to the bike network. The following five Philadelphia district schools meet these criteria: Baldi, C. C. A. (1209 enrolled); Solis-Cohen, Solomon (1368 enrolled); Frankford High School (1222 enrolled); Frank, Anne (1227 enrolled), Central (2238 enrolled). The following four neighborhoods contain these schools: Bustleton, Castor Gardens, Logan, and Northwood. The total enrollment of these schools is 7264.</p>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+                        <!-- "How did I manage to do it?" button -->
+                        <button id="showTextBoxButton1" class="btn btn-outline-dark flex-shrink-0" type="button">
+                            How did I manage to do it?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox1" class="hiddenTextbox">
+            <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
+        </div>
+    </div>
+
+    <!-- Content Pages -->
+    <div class="content-page">
+        <!-- Page 1 -->
+        <div id="page1" class="container px-4 px-lg-5 my-5" style="display: none;">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+                </div>
+            </nav>
+            <!-- Product section-->
+            <section class="py-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6">
                         <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
@@ -99,29 +148,23 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- Hidden Text Box -->
+            <div id="hiddenTextbox1" class="hiddenTextbox">
+                <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
             </div>
-        </section>
-        <!-- Hidden Text Box -->
-        <div id="hiddenTextbox1" class="hiddenTextbox">
-            <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
         </div>
-        <!-- Footer -->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
-        </footer>
-    </div>
 
-    <!-- Page 2 -->
-    <div id="page2" style="display: none;">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
-            </div>
-        </nav>
-        <!-- Product section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
+        <!-- Page 2 -->
+        <div id="page2" class="container px-4 px-lg-5 my-5" style="display: none;">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+                </div>
+            </nav>
+            <!-- Product section-->
+            <section class="py-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6">
                         <img class="card-img-top mb-0" src="assets/map2.png" alt="Map 2" />
@@ -145,29 +188,23 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- Hidden Text Box -->
+            <div id="hiddenTextbox2" class="hiddenTextbox" style="display: none;">
+                <textarea class="form-control" rows="3">MAP 2 HOW.</textarea>
             </div>
-        </section>
-        <!-- Hidden Text Box -->
-        <div id="hiddenTextbox2" class="hiddenTextbox" style="display: none;">
-            <textarea class="form-control" rows="3">This second lab introduced me to new methods of data visualization using Python libraries like Matplotlib and Seaborn. I learned how to create various types of plots including line plots, scatter plots, bar plots, and histograms. These skills are essential for analyzing and presenting data effectively.</textarea>
         </div>
-        <!-- Footer -->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
-        </footer>
-    </div>
 
-    <!-- Page 3 -->
-    <div id="page3" style="display: none;">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
-            </div>
-        </nav>
-        <!-- Product section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
+        <!-- Page 3 -->
+        <div id="page3" class="container px-4 px-lg-5 my-5" style="display: none;">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container px-4 px-lg-5">
+                    <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+                </div>
+            </nav>
+            <!-- Product section-->
+            <section class="py-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6">
                         <img class="card-img-top mb-0" src="assets/map3.png" alt="Map 3" />
@@ -191,16 +228,12 @@
                         </div>
                     </div>
                 </div>
+            </section>
+            <!-- Hidden Text Box -->
+            <div id="hiddenTextbox3" class="hiddenTextbox" style="display: none;">
+                <textarea class="form-control" rows="3">The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</textarea>
             </div>
-        </section>
-        <!-- Hidden Text Box -->
-        <div id="hiddenTextbox3" class="hiddenTextbox" style="display: none;">
-            <textarea class="form-control" rows="3">The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</textarea>
         </div>
-        <!-- Footer -->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
-        </footer>
     </div>
 
     <!-- Bootstrap core JS-->
@@ -274,3 +307,4 @@
     </script>
 </body>
 </html>
+
