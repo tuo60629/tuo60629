@@ -18,6 +18,7 @@
             display: none;
             margin-top: 10px; /* Adjusted margin for less space */
         }
+
         .col-md-6 img {
             margin-bottom: 0px; /* Reducing bottom margin of image to 0 */
         }
@@ -36,25 +37,50 @@
     </style>
 </head>
 <body>
-@@ -36,7 +48,7 @@
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+        </div>
+    </nav>
+    <!-- Product section-->
+    <section class="py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6">
-                    <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" /> <!-- Removed the mb-5 class -->
                     <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
                 </div>
                 <div class="col-md-6">
                     <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
-@@ -46,7 +58,7 @@ <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through">$4,000,000.00</span>
+                        <span>$3,999,999.99</span>
                     </div>
                     <p class="lead"> The Philadelphia School District is interested in encouraging its students to bike to school. The district wants to know what neighborhoods contain its largest (greater than 1200 enrollment) schools that are well-connected (within 0.1 miles) to the bike network. The following five Philadelphia district schools meet these criteria: Baldi, C. C. A. (1209 enrolled); Solis-Cohen, Solomon (1368 enrolled); Frankford High School (1222 enrolled); Frank, Anne (1227 enrolled), Central (2238 enrolled). The following four neighborhoods contain these schools: Bustleton, Castor Gardens, Logan, and Northwood. The total enrollment of these schools is 7264.</p>
                     <div class="d-flex">
-                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner()">
                         <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart
                         </button>
-@@ -72,6 +84,23 @@ <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h
+                        <!-- "How did I manage to do it?" button -->
+                        <button id="showTextBoxButton" class="btn btn-outline-dark flex-shrink-0" type="button">
+                            How did I manage to do it?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hidden Text Box -->
+    <div id="hiddenTextbox">
+        <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Script for the silly banner -->
+    <script>
         function showBanner() {
             alert("You added a real nice lookin' map to your cart! 🎉");
         }
@@ -80,6 +106,7 @@
         // Get references to the button and the hidden text box
         const showTextBoxButton = document.getElementById('showTextBoxButton');
         const hiddenTextbox = document.getElementById('hiddenTextbox');
+
         // Add event listener to the button
         showTextBoxButton.addEventListener('click', function() {
             // Toggle the visibility of the text box
