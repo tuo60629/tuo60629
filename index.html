@@ -63,7 +63,7 @@
                             Add to cart
                         </button>
                         <!-- "How did I manage to do it?" button -->
-                        <button id="showTextBoxButton" class="btn btn-outline-dark flex-shrink-0" type="button">
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
                             How did I manage to do it?
                         </button>
                     </div>
@@ -90,6 +90,10 @@
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart
                         </button>
+                        <!-- "How did I manage to do it?" button -->
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            How did I manage to do it?
+                        </button>
                     </div>
                 </div>
             </div>
@@ -113,6 +117,10 @@
                         <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart
+                        </button>
+                        <!-- "How did I manage to do it?" button -->
+                        <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                            How did I manage to do it?
                         </button>
                     </div>
                 </div>
@@ -149,21 +157,6 @@
                 });
             }
         }
-    </script>
-    <script>
-        // Get references to the button and the hidden text box
-        const showTextBoxButton = document.getElementById('showTextBoxButton');
-        const hiddenTextbox = document.getElementById('hiddenTextbox');
-
-        // Add event listener to the button
-        showTextBoxButton.addEventListener('click', function() {
-            // Toggle the visibility of the text box
-            if (hiddenTextbox.style.display === 'none') {
-                hiddenTextbox.style.display = 'block';
-            } else {
-                hiddenTextbox.style.display = 'none';
-            }
-        });
     </script>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
