@@ -22,6 +22,18 @@
         .col-md-6 img {
             margin-bottom: 0px; /* Reducing bottom margin of image to 0 */
         }
+
+        .money {
+            position: fixed;
+            font-size: 24px;
+            animation: fly 3s linear forwards;
+            opacity: 0;
+        }
+
+        @keyframes fly {
+            0% { transform: translate(0, 0) rotate(0deg); opacity: 1; }
+            100% { transform: translate(300px, -800px) rotate(720deg); opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -36,7 +48,7 @@
         <div class="container px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
                 <div class="col-md-6">
-                    <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" /> <!-- Removed the mb-5 class -->
+                    <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
                 </div>
                 <div class="col-md-6">
                     <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
@@ -46,7 +58,7 @@
                     </div>
                     <p class="lead"> The Philadelphia School District is interested in encouraging its students to bike to school. The district wants to know what neighborhoods contain its largest (greater than 1200 enrollment) schools that are well-connected (within 0.1 miles) to the bike network. The following five Philadelphia district schools meet these criteria: Baldi, C. C. A. (1209 enrolled); Solis-Cohen, Solomon (1368 enrolled); Frankford High School (1222 enrolled); Frank, Anne (1227 enrolled), Central (2238 enrolled). The following four neighborhoods contain these schools: Bustleton, Castor Gardens, Logan, and Northwood. The total enrollment of these schools is 7264.</p>
                     <div class="d-flex">
-                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner()">
+                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
                             <i class="bi-cart-fill me-1"></i>
                             Add to cart
                         </button>
@@ -71,6 +83,23 @@
     <script>
         function showBanner() {
             alert("You added a real nice lookin' map to your cart! 🎉");
+        }
+
+        function createMoney() {
+            const total = 20; // Total number of money symbols
+            for (let i = 0; i < total; i++) {
+                const money = document.createElement('div');
+                money.classList.add('money');
+                money.textContent = '$';
+                money.style.left = Math.random() * window.innerWidth + 'px';
+                money.style.animationDelay = Math.random() * 1 + 's';
+                document.body.appendChild(money);
+
+                // Remove the money element after animation ends
+                money.addEventListener('animationend', function() {
+                    money.remove();
+                });
+            }
         }
     </script>
     <script>
