@@ -14,7 +14,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <style>
         /* Style for the hidden text box */
-        #hiddenTextbox {
+        .hiddenTextbox {
             display: none;
             margin-top: 10px; /* Adjusted margin for less space */
         }
@@ -40,7 +40,6 @@
             position: fixed;
             top: 50px; /* Adjusted top position */
             left: 0;
-            right: 0;
             background-color: #333;
             padding: 10px 0;
             text-align: center;
@@ -97,7 +96,7 @@
                                 Add to cart
                             </button>
                             <!-- "How did I manage to do it?" button -->
-                            <button id="showTextBoxButton" class="btn btn-outline-dark flex-shrink-0" type="button">
+                            <button id="showTextBoxButton1" class="btn btn-outline-dark flex-shrink-0" type="button">
                                 How did I manage to do it?
                             </button>
                         </div>
@@ -106,7 +105,7 @@
             </div>
         </section>
         <!-- Hidden Text Box -->
-        <div id="hiddenTextbox">
+        <div id="hiddenTextbox1" class="hiddenTextbox">
             <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
         </div>
         <!-- Footer -->
@@ -152,7 +151,7 @@
             </div>
         </section>
         <!-- Hidden Text Box -->
-        <div id="hiddenTextbox2" style="display: none;">
+        <div id="hiddenTextbox2" class="hiddenTextbox" style="display: none;">
             <textarea class="form-control" rows="3">This map required extensive research into the current subway system, including identifying all stations, lines, and interchanges. Additionally, I utilized advanced design software to create a clear and visually appealing representation of the subway system.</textarea>
         </div>
         <!-- Footer -->
@@ -198,7 +197,7 @@
             </div>
         </section>
         <!-- Hidden Text Box -->
-        <div id="hiddenTextbox3" style="display: none;">
+        <div id="hiddenTextbox3" class="hiddenTextbox" style="display: none;">
             <textarea class="form-control" rows="3">The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</textarea>
         </div>
         <!-- Footer -->
@@ -234,6 +233,20 @@
             }
         }
 
+        // Get references to the button and the hidden text box for Page 1
+        const showTextBoxButton1 = document.getElementById('showTextBoxButton1');
+        const hiddenTextbox1 = document.getElementById('hiddenTextbox1');
+
+        // Add event listener to the button for Page 1
+        showTextBoxButton1.addEventListener('click', function() {
+            // Toggle the visibility of the text box for Page 1
+            if (hiddenTextbox1.style.display === 'none') {
+                hiddenTextbox1.style.display = 'block';
+            } else {
+                hiddenTextbox1.style.display = 'none';
+            }
+        });
+
         // Get references to the button and the hidden text box for Page 2
         const showTextBoxButton2 = document.getElementById('showTextBoxButton2');
         const hiddenTextbox2 = document.getElementById('hiddenTextbox2');
@@ -264,3 +277,4 @@
     </script>
 </body>
 </html>
+
