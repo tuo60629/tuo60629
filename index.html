@@ -38,7 +38,7 @@
         /* Styles for the ribbon navigation */
         .ribbon-nav {
             position: fixed;
-            top: 0;
+            top: 50px; /* Adjusted top position */
             left: 0;
             right: 0;
             background-color: #333;
@@ -66,6 +66,7 @@
     <div class="ribbon-nav">
         <a href="#page1">Page 1</a>
         <a href="#page2">Page 2</a>
+        <a href="#page3">Page 3</a>
     </div>
     
     <!-- Page 1 -->
@@ -130,12 +131,12 @@
                         <img class="card-img-top mb-0" src="assets/map2.png" alt="Map 2" />
                     </div>
                     <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">Map of New York Subway System</h1>
+                        <h1 class="display-5 fw-bolder">Map of New York City Subway System</h1>
                         <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$500,000.00</span>
-                            <span>$499,999.99</span>
+                            <span class="text-decoration-line-through">$2,000,000.00</span>
+                            <span>$1,999,999.99</span>
                         </div>
-                        <p class="lead">Detailed and up-to-date map showing all the subway lines, stations, and connections throughout New York City.</p>
+                        <p class="lead"> This map required extensive research into the current subway system, including identifying all stations, lines, and interchanges. Additionally, I utilized advanced design software to create a clear and visually appealing representation of the subway system.</p>
                         <div class="d-flex">
                             <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
                                 <i class="bi-cart-fill me-1"></i>
@@ -151,8 +152,54 @@
             </div>
         </section>
         <!-- Hidden Text Box -->
-        <div id="hiddenTextbox2">
+        <div id="hiddenTextbox2" style="display: none;">
             <textarea class="form-control" rows="3">This map required extensive research into the current subway system, including identifying all stations, lines, and interchanges. Additionally, I utilized advanced design software to create a clear and visually appealing representation of the subway system.</textarea>
+        </div>
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; This is MY (NOT YOURS) Website 2024</p></div>
+        </footer>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page3" style="display: none;">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+            </div>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="row gx-4 gx-lg-5 align-items-center">
+                    <div class="col-md-6">
+                        <img class="card-img-top mb-0" src="assets/map3.png" alt="Map 3" />
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="display-5 fw-bolder">Map of London Underground</h1>
+                        <div class="fs-5 mb-5">
+                            <span class="text-decoration-line-through">$3,000,000.00</span>
+                            <span>$2,999,999.99</span>
+                        </div>
+                        <p class="lead"> The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</p>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
+                                <i class="bi-cart-fill me-1"></i>
+                                Add to cart
+                            </button>
+                            <!-- "How did I manage to do it?" button -->
+                            <button id="showTextBoxButton3" class="btn btn-outline-dark flex-shrink-0" type="button">
+                                How did I manage to do it?
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox3" style="display: none;">
+            <textarea class="form-control" rows="3">The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</textarea>
         </div>
         <!-- Footer -->
         <footer class="py-5 bg-dark">
@@ -198,6 +245,20 @@
                 hiddenTextbox2.style.display = 'block';
             } else {
                 hiddenTextbox2.style.display = 'none';
+            }
+        });
+
+        // Get references to the button and the hidden text box for Page 3
+        const showTextBoxButton3 = document.getElementById('showTextBoxButton3');
+        const hiddenTextbox3 = document.getElementById('hiddenTextbox3');
+
+        // Add event listener to the button for Page 3
+        showTextBoxButton3.addEventListener('click', function() {
+            // Toggle the visibility of the text box for Page 3
+            if (hiddenTextbox3.style.display === 'none') {
+                hiddenTextbox3.style.display = 'block';
+            } else {
+                hiddenTextbox3.style.display = 'none';
             }
         });
     </script>
