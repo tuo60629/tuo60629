@@ -58,11 +58,6 @@
         .ribbon-nav a:hover {
             background-color: #555;
         }
-
-        /* Style for content pages */
-        .content-page {
-            padding-top: 70px; /* Adjusted padding to avoid covering content */
-        }
     </style>
 </head>
 <body>
@@ -73,8 +68,8 @@
         <a href="#page3">Page 3</a>
     </div>
     
-    <!-- Home Page -->
-    <div class="container px-4 px-lg-5 mt-5">
+    <!-- Page 1 -->
+    <div id="page1" class="container px-4 px-lg-5 my-5">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -113,126 +108,83 @@
         </div>
     </div>
 
-    <!-- Content Pages -->
-    <div class="content-page">
-        <!-- Page 1 -->
-        <div id="page1" class="container px-4 px-lg-5 my-5" style="display: none;">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand" href="#!">BUY MY MAPS</a>
-                </div>
-            </nav>
-            <!-- Product section-->
-            <section class="py-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">
-                        <img class="card-img-top mb-0" src="assets/map1.png" alt="Map 1" />
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">Map of Philadelphia Neighborhoods and Schools</h1>
-                        <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$4,000,000.00</span>
-                            <span>$3,999,999.99</span>
-                        </div>
-                        <p class="lead"> The Philadelphia School District is interested in encouraging its students to bike to school. The district wants to know what neighborhoods contain its largest (greater than 1200 enrollment) schools that are well-connected (within 0.1 miles) to the bike network. The following five Philadelphia district schools meet these criteria: Baldi, C. C. A. (1209 enrolled); Solis-Cohen, Solomon (1368 enrolled); Frankford High School (1222 enrolled); Frank, Anne (1227 enrolled), Central (2238 enrolled). The following four neighborhoods contain these schools: Bustleton, Castor Gardens, Logan, and Northwood. The total enrollment of these schools is 7264.</p>
-                        <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                            <!-- "How did I manage to do it?" button -->
-                            <button id="showTextBoxButton1" class="btn btn-outline-dark flex-shrink-0" type="button">
-                                How did I manage to do it?
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Hidden Text Box -->
-            <div id="hiddenTextbox1" class="hiddenTextbox">
-                <textarea class="form-control" rows="3">This first lab introduced me to select functions. These functions were necessary to find the overlap between different characteristics that answered the given question. I also learned the basics of how to navigate ARCGIS PRO to find several of the tools including: select, content list, add layer, map frame, and others.</textarea>
+    <!-- Page 2 -->
+    <div id="page2" class="container px-4 px-lg-5 my-5" style="display: none;">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
             </div>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <img class="card-img-top mb-0" src="assets/map2.png" alt="Map 2" />
+                </div>
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bolder">Map of New York City</h1>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through">$2,000,000.00</span>
+                        <span>$1,999,999.99</span>
+                    </div>
+                    <p class="lead">This map showcases the boroughs of New York City along with major landmarks and attractions. It highlights popular tourist spots, historical sites, and cultural hubs, making it an essential guide for both visitors and locals alike.</p>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+                        <!-- "How did I manage to do it?" button -->
+                        <button id="showTextBoxButton2" class="btn btn-outline-dark flex-shrink-0" type="button">
+                            How did I manage to do it?
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox2" class="hiddenTextbox" style="display: none;">
+            <textarea class="form-control" rows="3">This map of New York City was created by combining various datasets, including geographical information, landmarks, and points of interest. The design focused on clarity and simplicity to provide an intuitive navigation experience for users.</textarea>
         </div>
+    </div>
 
-        <!-- Page 2 -->
-        <div id="page2" class="container px-4 px-lg-5 my-5" style="display: none;">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand" href="#!">BUY MY MAPS</a>
-                </div>
-            </nav>
-            <!-- Product section-->
-            <section class="py-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">
-                        <img class="card-img-top mb-0" src="assets/map2.png" alt="Map 2" />
-                    </div>
-                    <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">MAP 2 TITLE</h1>
-                        <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$2,000,000.00</span>
-                            <span>$1,999,999.99</span>
-                        </div>
-                        <p class="lead"> MAP 2 WHAT.</p>
-                        <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                            <!-- "How did I manage to do it?" button -->
-                            <button id="showTextBoxButton2" class="btn btn-outline-dark flex-shrink-0" type="button">
-                                How did I manage to do it?
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Hidden Text Box -->
-            <div id="hiddenTextbox2" class="hiddenTextbox" style="display: none;">
-                <textarea class="form-control" rows="3">MAP 2 HOW.</textarea>
+    <!-- Page 3 -->
+    <div id="page3" class="container px-4 px-lg-5 my-5" style="display: none;">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#!">BUY MY MAPS</a>
             </div>
-        </div>
-
-        <!-- Page 3 -->
-        <div id="page3" class="container px-4 px-lg-5 my-5" style="display: none;">
-            <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container px-4 px-lg-5">
-                    <a class="navbar-brand" href="#!">BUY MY MAPS</a>
+        </nav>
+        <!-- Product section-->
+        <section class="py-5">
+            <div class="row gx-4 gx-lg-5 align-items-center">
+                <div class="col-md-6">
+                    <img class="card-img-top mb-0" src="assets/map3.png" alt="Map 3" />
                 </div>
-            </nav>
-            <!-- Product section-->
-            <section class="py-5">
-                <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6">
-                        <img class="card-img-top mb-0" src="assets/map3.png" alt="Map 3" />
+                <div class="col-md-6">
+                    <h1 class="display-5 fw-bolder">Map of London Underground</h1>
+                    <div class="fs-5 mb-5">
+                        <span class="text-decoration-line-through">$3,000,000.00</span>
+                        <span>$2,999,999.99</span>
                     </div>
-                    <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">Map of London Underground</h1>
-                        <div class="fs-5 mb-5">
-                            <span class="text-decoration-line-through">$3,000,000.00</span>
-                            <span>$2,999,999.99</span>
-                        </div>
-                        <p class="lead"> The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</p>
-                        <div class="d-flex">
-                            <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
-                            </button>
-                            <!-- "How did I manage to do it?" button -->
-                            <button id="showTextBoxButton3" class="btn btn-outline-dark flex-shrink-0" type="button">
-                                How did I manage to do it?
-                            </button>
-                        </div>
+                    <p class="lead"> The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</p>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-dark flex-shrink-0 me-2" type="button" onclick="showBanner(); createMoney()">
+                            <i class="bi-cart-fill me-1"></i>
+                            Add to cart
+                        </button>
+                        <!-- "How did I manage to do it?" button -->
+                        <button id="showTextBoxButton3" class="btn btn-outline-dark flex-shrink-0" type="button">
+                            How did I manage to do it?
+                        </button>
                     </div>
                 </div>
-            </section>
-            <!-- Hidden Text Box -->
-            <div id="hiddenTextbox3" class="hiddenTextbox" style="display: none;">
-                <textarea class="form-control" rows="3">The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</textarea>
             </div>
+        </section>
+        <!-- Hidden Text Box -->
+        <div id="hiddenTextbox3" class="hiddenTextbox" style="display: none;">
+            <textarea class="form-control" rows="3">The London Underground map project involved intricate research into the historical development and current layout of the Tube network. The map was designed to be user-friendly and visually appealing, while still accurately representing the complex network of lines and stations.</textarea>
         </div>
     </div>
 
